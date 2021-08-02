@@ -168,6 +168,7 @@ class broadcastAlarm:
 
     def isNotOnStream(self):            # 방송중이지 않을 때 실행하는 메서드
         self.RPi.print_Display(firstString=config.NAME_1 + ' is', secondString='* OFFLINE *')
+        self.RPi.LOW_LED_1()
         time.sleep(config.REFRESH_RATE)
 
     def isOnStream(self, cnt=0):        # 방송중일 때 실행되는 메서드
